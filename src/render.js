@@ -2,10 +2,11 @@ const crel = require('crel')
 
 function render(state) {
   function renderScreen() {
+    const style = state.error == '' ? '' : 'background-color: red;'
     return crel('input', {
       value: state.input,
       disabled: true,
-      
+      style: style,
     })
   }
 
@@ -27,18 +28,25 @@ function render(state) {
     return crel('div', buttons, operations, renderEvalButton(), renderClearButton())
   }
 
-    function renderEvalButton() {
+  function renderEvalButton() {
     const button = crel('button', '=')
     button.addEventListener('click', function (event) {
-      const result = eval(state.input)
-      state.input = result
+      try {
+        const result = eval(state.input)
+        state.input = result
+        state.error = ''
+      } catch (error) {
+        state.error = error
+      }
     })
     return button
   }
   function renderClearButton() {
-    const button = crel('button',{class:"clr"}, 'C')
+    const button = crel('button', { class: "clr" }, 'C')
     button.addEventListener('click', function (event) {
       state.input = ''
+      state.error = ''
+
     })
     return button
   }
