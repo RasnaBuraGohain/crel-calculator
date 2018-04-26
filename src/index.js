@@ -3,11 +3,11 @@ const mobx = require('mobx')
 const render = require('./render.js')
 require('./index.css')
 
-const viewport = crel('div', crel('div'))
+const viewport = crel('div', {class:'box'}, crel('div'))
 document.body.appendChild(viewport)
 
 const state = mobx.observable({
-  input: '' ,
+  input: '',
   output: '',
 })
 
