@@ -2,7 +2,6 @@ body {
   background: url(http://www.inkspilldesign.com/demo/wood-tile-background.jpg);
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   width: 300px;
-  
   border: 10px rgb(163, 193, 194);
   border-style: outset;
   padding: 25px;
@@ -14,11 +13,19 @@ body {
 input {
   height: 50px;
   width: 100%;
-  text-align: right;
-  background-color: rgb(255, 255, 255);
-  font-size: 22px;
-  border-style: inset;
-  border-radius: 5px;
+  display: block;
+	margin: 15px auto;
+	border-radius: 4px;
+	border-top: 2px solid #C1C1C1;
+	border-right: 2px solid #C1C1C1;
+	border-bottom: 2px solid #FFF;
+	border-left: 2px solid #FFF;
+	background-color: #FFF;
+	box-shadow: inset 0px 0px 10px #030303, inset 0px -20px 1px rgba(150, 150, 150, .2);
+	font-size: 28px;
+	color: #666;
+	text-align: right;
+	font-weight: 400;
 
 }
 
