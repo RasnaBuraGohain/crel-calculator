@@ -7,6 +7,7 @@ body {
   background: url(http://szzljy.com/images/steel/steel5.jpg);
   border: 3px rgb(163, 193, 194);
   border-style: outset;
+  border-radius: 10px;
   padding: 25px;
   margin: auto;
   width: 300px;
